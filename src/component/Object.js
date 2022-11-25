@@ -1,41 +1,32 @@
 /* eslint-disable import/prefer-default-export */
-export const userDetail = [
-  {
-    username: {
-      personalInfo: { name: "dev", address: "Delhi", phoneNo: "12323123" },
-      professional: { experience: "3 Years" },
-      academic: {
-        college: "Sms", degree: "B.teh", passOut: "2022-06- 12", address: "Lucknow ",
-      },
-      employmentHistory: {
-        currentCompany: "celestial",
-        employerHistory:
-          {
-            name: " sachin ",
-            company: "google",
-          },
-      },
-    },
-    dateOfBirth: "10/12/2021",
+const employeeDetail = [{
+  employee: {
+    name: "John",
+    dateOfBirth: "22/02/2022",
     occupation: "developer",
-  },
-  {
-    username: {
-      personalInfo: { name: "dev", address: "Delhi", phoneNo: "12323123" },
-      professional: { experience: "3 Years" },
-      academic: {
-        college: "Sms", degree: "B.teh", passOut: "2022-06- 12", address: "Lucknow ",
-      },
-      employmentHistory: {
-        currentCompany: "celestial",
-        employerHistory:
-          {
-            name: "sachin ",
-            company: "google",
-          },
-      },
+    personal: {
+      name: "john", address: "Delhi", phoneNo: 1234341,
     },
-    dateOfBirth: "10/12/2021",
-    occupation: "developer",
+    professional: { experiences: "3 years" },
+    academic: {
+      collegeName: "Sms ", degree: "B.tech", passOut: "2022-06-22", address: "Lucknow",
+    },
+    employment: { currentCompany: "Celestial" },
   },
+},
+{
+  employee: {
+    name: "John",
+    dateOfBirth: "22/02/2022",
+    occupation: "developer",
+    personal: {
+      name: "john", address: "Delhi", phoneNo: 1234341,
+    },
+    professional: { experiences: "3 years" },
+    academic: {
+      collegeName: "Sms ", degree: "B.tech", passOut: "2022-06-22", address: "Lucknow",
+    },
+    employment: { currentCompany: "Celestial" },
+  },
+},
 ];
