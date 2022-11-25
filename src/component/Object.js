@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 export const userDetail = [
   {
-    username: [{
+    username: {
       personalInfo: { name: "dev", address: "Delhi", phoneNo: "12323123" },
       professional: { experience: "3 Years" },
       academic: {
@@ -11,11 +11,30 @@ export const userDetail = [
         currentCompany: "celestial",
         employerHistory:
           {
-            name: " FaceBook ",
+            name: " sachin ",
             company: "google",
           },
       },
-    }],
+    },
+    dateOfBirth: "10/12/2021",
+    occupation: "developer",
+  },
+  {
+    username: {
+      personalInfo: { name: "dev", address: "Delhi", phoneNo: "12323123" },
+      professional: { experience: "3 Years" },
+      academic: {
+        college: "Sms", degree: "B.teh", passOut: "2022-06- 12", address: "Lucknow ",
+      },
+      employmentHistory: {
+        currentCompany: "celestial",
+        employerHistory:
+          {
+            name: "sachin ",
+            company: "google",
+          },
+      },
+    },
     dateOfBirth: "10/12/2021",
     occupation: "developer",
   },
