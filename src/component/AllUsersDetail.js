@@ -7,15 +7,6 @@ import {
   TableRow,
 } from "@mui/material";
 import useStyle from "./AllUsersDetailStyle";
-// function CreateData(name, calories, fat, carbs, protein) {
-//   return {
-//     name, calories, fat, carbs, protein,
-//   };
-// }
-
-// const rows = () => {
-//   CreateData("sachin", 100, 45, 88, 4);
-// };
 
 function AllUsersDetails() {
   const classes = useStyle();
