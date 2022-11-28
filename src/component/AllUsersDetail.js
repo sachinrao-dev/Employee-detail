@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import {
   Table,
+  TableBody,
   TableCell,
   TableContainer,
   TableHead,
@@ -10,8 +11,7 @@ import useStyle from "./AllUsersDetailStyle";
 import EmployeeDetail from "./Context";
 
 function AllUsersDetails() {
-  const num = useContext(EmployeeDetail);
-  console.log(num, "Here is num");
+  const EmployeeInfo = useContext(EmployeeDetail);
   const classes = useStyle();
   return (
     <div className={classes.allUserList}>
@@ -28,6 +28,15 @@ function AllUsersDetails() {
                 <TableCell> Occupation </TableCell>
               </TableRow>
             </TableHead>
+            <TableBody>
+              {EmployeeInfo.map((item) => (
+                <TableRow>
+                  <TableCell>{item.name}</TableCell>
+                  <TableCell>{item.dateOfBirth}</TableCell>
+                  <TableCell>{item.occupation}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>

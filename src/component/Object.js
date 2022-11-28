@@ -19,9 +19,9 @@ export const employee = [
     employment: { currentCompany: "Celestial" },
   },
   {
-    name: "John",
+    name: "Yogesh",
     dateOfBirth: "22/02/2022",
-    occupation: "developer",
+    occupation: "React Developer",
     personal: {
       name: "john",
       address: "Delhi",
