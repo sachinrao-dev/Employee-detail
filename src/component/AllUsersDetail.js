@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Table,
   TableCell,
@@ -7,8 +7,11 @@ import {
   TableRow,
 } from "@mui/material";
 import useStyle from "./AllUsersDetailStyle";
+import EmployeeDetail from "./Context";
 
 function AllUsersDetails() {
+  const num = useContext(EmployeeDetail);
+  console.log(num, "Here is num");
   const classes = useStyle();
   return (
     <div className={classes.allUserList}>
