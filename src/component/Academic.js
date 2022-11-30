@@ -9,11 +9,13 @@ import {
 } from "@mui/material";
 import EmployeeDetail from "./Context";
 import NavBar from "./NavBar";
+import useStyle from "./AcademicStyle";
 
 function Academic() {
   const academic = useContext(EmployeeDetail);
+  const classes = useStyle();
   return (
-    <div className="container">
+    <div className={classes.container}>
       <NavBar />
       <TableContainer>
         <Table>

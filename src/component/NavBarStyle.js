@@ -4,6 +4,7 @@ const useStyle = makeStyles({
   navBar: {
     width: "70%",
     margin: "0 auto",
+    marginBottom: "30px",
     "& a.active": {
       background: "#282A3A",
       color: "white",
@@ -15,7 +16,6 @@ const useStyle = makeStyles({
     color: "black",
     background: "#BAD1C2",
   },
-
 });
 
 export default useStyle;

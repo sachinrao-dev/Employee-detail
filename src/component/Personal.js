@@ -10,11 +10,13 @@ import {
 } from "@mui/material";
 import EmployeeDetail from "./Context";
 import NavBar from "./NavBar";
+import useStyle from "./PersonalStyle";
 
 function Personal() {
   const personal = useContext(EmployeeDetail);
+  const classes = useStyle();
   return (
-    <div>
+    <div className={classes.container}>
       <NavBar />
       <TableContainer>
         <Table>
