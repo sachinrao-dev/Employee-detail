@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+
 import {
   Table,
   TableBody,
@@ -13,7 +14,7 @@ import NavBar from "./NavBar";
 function Personal() {
   const personal = useContext(EmployeeDetail);
   return (
-    <div className="container">
+    <div>
       <NavBar />
       <TableContainer>
         <Table>
