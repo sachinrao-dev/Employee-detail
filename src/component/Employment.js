@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
+import EmployeeDetail from "./Context";
 
 function Employment() {
+  const employment = useContext(EmployeeDetail);
   return (
-    <div>
-      <h1>Employment</h1>
+    <div className="container">
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow key={employment.id}>
+              <TableCell>Current Company</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {employment.map((item) => (
+              <TableRow key={item.id}>
+                <TableCell>{item.employment.currentCompany}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }
