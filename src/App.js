@@ -1,8 +1,13 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "./component/Header";
-import AllUsersDetails from "./component/AllUsersDetail";
+import Dashboard from "./component/Dashboard";
 import EmployeeDetail from "./component/Context";
-import { employee } from "./component/Object";
+import { employee } from "./component/EmployeeInfo";
+import Personal from "./component/Personal";
+import Professional from "./component/Professional";
+import Academic from "./component/Academic";
+import Employment from "./component/Employment";
 import "./App.css";
 
 function App() {
@@ -10,7 +15,13 @@ function App() {
     <div className="App">
       <EmployeeDetail.Provider value={employee}>
         <Header />
-        <AllUsersDetails />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="users/1/personal" element={<Personal />} />
+          <Route path="/professional" element={<Professional />} />
+          <Route path="/academic" element={<Academic />} />
+          <Route path="/employment" element={<Employment />} />
+        </Routes>
       </EmployeeDetail.Provider>
     </div>
   );

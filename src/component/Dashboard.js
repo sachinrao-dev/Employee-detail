@@ -1,4 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable max-len */
+/* eslint-disable react/button-has-type */
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import {
   Table,
   TableBody,
@@ -7,12 +11,13 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import useStyle from "./AllUsersDetailStyle";
+import useStyle from "./DashboardStyle";
 import EmployeeDetail from "./Context";
 
-function AllUsersDetails() {
+function Dashboard() {
   const EmployeeInfo = useContext(EmployeeDetail);
   const classes = useStyle();
+
   return (
     <div className={classes.allUserList}>
       <div className={classes.allUser}>
@@ -23,7 +28,9 @@ function AllUsersDetails() {
           <Table>
             <TableHead>
               <TableRow className={classes.rowTable}>
-                <TableCell className={classes.headerTable}> Name </TableCell>
+                <TableCell className={classes.headerTable}>
+                  Name
+                </TableCell>
                 <TableCell> Birth Date </TableCell>
                 <TableCell> Occupation </TableCell>
               </TableRow>
@@ -31,7 +38,7 @@ function AllUsersDetails() {
             <TableBody>
               {EmployeeInfo.map((item) => (
                 <TableRow>
-                  <TableCell>{item.name}</TableCell>
+                  <TableCell><Link to={`users/${item.id}/personal`}>{item.name}</Link></TableCell>
                   <TableCell>{item.dateOfBirth}</TableCell>
                   <TableCell>{item.occupation}</TableCell>
                 </TableRow>
@@ -43,4 +50,4 @@ function AllUsersDetails() {
     </div>
   );
 }
-export default AllUsersDetails;
+export default Dashboard;
