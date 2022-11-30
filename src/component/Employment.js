@@ -20,8 +20,8 @@ function Employment() {
   const userDetail = employeeEmploymentData.find((item) => item.id === parseInt(userId, 10));
   return (
     <div className={classes.container}>
-      <NavLink to={`/users/${userId}/employment/alluserscompanies`}>Employees in all companies</NavLink>
       <NavBar />
+      <NavLink className={classes.navLink} to={`/users/${userId}/employment/alluserscompanies`}>Employees in all companies</NavLink>
       <TableContainer>
         <Table>
           <TableHead>

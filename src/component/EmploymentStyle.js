@@ -1,7 +1,18 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles({
+  // nav: {
+  //   "& a": {
+  //     textAlign: "right",
+  //     background: "red",
+  //   },
+  // },
   container: {
+    "& navLink": {
+      "& a": {
+        background: "red",
+      },
+    },
     width: "70%",
     margin: "0 auto",
     "& table": {
