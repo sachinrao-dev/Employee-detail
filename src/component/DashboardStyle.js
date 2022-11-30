@@ -2,32 +2,40 @@ import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles({
   allUserList: {
-    width: "100%",
+    width: "70%",
+    margin: "0 auto",
   },
   tableContainer: {
     "& div": {
       "& table": {
+        "& tbody": {
+          background: "#BAD1C2",
+          "& tr": {
+            "& td": {
+              color: "black",
+              textAlign: "center",
+              fontSize: "16px",
+              "& a": {
+                color: "black",
+                textDecoration: "none",
+              },
+            },
+          },
+        },
         "& thead": {
-          textAlign: "right",
-          color: "red",
-          border: "1px solid",
-          borderRadius: "5px",
-          fontSize: "30px",
+          height: "5px",
           "& tr": {
             "& th": {
-              textAlign: "right",
-              border: "1px solid",
-              fontSize: "20px",
-              fontVariant: "bold",
-              height: "20px",
-              // color: "#d5ebe8",
-              background: "#d5ebe8",
+              textAlign: "center",
+              color: "white",
+              background: "#282A3A",
+              fontSize: "1em",
+              fontWeight: "700",
             },
           },
         },
       },
     },
-
   },
   allUser: {
     textAlign: "left",
