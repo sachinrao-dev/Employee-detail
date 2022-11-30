@@ -11,7 +11,6 @@ import EmployeeDetail from "./Context";
 
 function Professional() {
   const professional = useContext(EmployeeDetail);
-  console.log(professional, "professional detail");
   return (
     <div className="container">
       <TableContainer>
