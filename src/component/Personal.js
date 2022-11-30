@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-
+import { useParams } from "react-router-dom";
 import {
   Table,
   TableBody,
@@ -13,8 +13,10 @@ import NavBar from "./NavBar";
 import useStyle from "./PersonalStyle";
 
 function Personal() {
-  const personal = useContext(EmployeeDetail);
+  const employeePersonalData = useContext(EmployeeDetail);
   const classes = useStyle();
+  const { userId } = useParams();
+  const userDetail = employeePersonalData.find((item) => item.id === parseInt(userId, 10));
   return (
     <div className={classes.container}>
       <NavBar />
@@ -28,13 +30,11 @@ function Personal() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {personal.map((item) => (
-              <TableRow>
-                <TableCell>{item.personal.name}</TableCell>
-                <TableCell>{item.personal.address}</TableCell>
-                <TableCell>{item.personal.phoneNo}</TableCell>
-              </TableRow>
-            ))}
+            <TableRow>
+              <TableCell>{userDetail?.personal?.name || "--"}</TableCell>
+              <TableCell>{userDetail?.personal?.address || "--"}</TableCell>
+              <TableCell>{userDetail?.personal?.phoneNo || "--"}</TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>

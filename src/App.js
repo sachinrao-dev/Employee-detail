@@ -16,10 +16,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="users/1/personal" element={<Personal />} />
-          <Route path="users/1/professional" element={<Professional />} />
-          <Route path="users/1/academic" element={<Academic />} />
-          <Route path="users/1/employment" element={<Employment />} />
+          <Route path="users/:userId">
+            <Route path="personal" element={<Personal />} />
+            <Route path="professional" element={<Professional />} />
+            <Route path="academic" element={<Academic />} />
+            <Route path="employment" element={<Employment />} />
+          </Route>
         </Routes>
       </EmployeeDetail.Provider>
     </div>

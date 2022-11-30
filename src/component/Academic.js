@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useParams } from "react-router-dom";
 import {
   Table,
   TableBody,
@@ -12,32 +13,33 @@ import NavBar from "./NavBar";
 import useStyle from "./AcademicStyle";
 
 function Academic() {
-  const academic = useContext(EmployeeDetail);
+  const employeeAcademicData = useContext(EmployeeDetail);
   const classes = useStyle();
+  const { userId } = useParams();
+  const userDetail = employeeAcademicData.find(
+    (item) => item.id === parseInt(userId, 10),
+  );
+
   return (
     <div className={classes.container}>
       <NavBar />
       <TableContainer>
         <Table>
           <TableHead>
-            <TableRow key={academic.id}>
+            <TableRow key={employeeAcademicData.id}>
               <TableCell>College Name</TableCell>
               <TableCell>Degree</TableCell>
               <TableCell>Pass Out year</TableCell>
               <TableCell>address</TableCell>
             </TableRow>
           </TableHead>
-
           <TableBody>
-            {academic.map((item) => (
-              <TableRow key={item.id}>
-                <TableCell>{item.academic.collegeName}</TableCell>
-                <TableCell>{item.academic.degree}</TableCell>
-                <TableCell>{item.academic.passOut}</TableCell>
-                <TableCell>{item.academic.address}</TableCell>
-
-              </TableRow>
-            ))}
+            <TableRow key={employeeAcademicData.id}>
+              <TableCell>{userDetail.academic.collegeName}</TableCell>
+              <TableCell>{userDetail.academic.degree}</TableCell>
+              <TableCell>{userDetail.academic.passOut}</TableCell>
+              <TableCell>{userDetail.academic.address}</TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </TableContainer>
