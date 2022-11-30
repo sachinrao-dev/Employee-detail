@@ -8,7 +8,6 @@ import Personal from "./component/Personal";
 import Professional from "./component/Professional";
 import Academic from "./component/Academic";
 import Employment from "./component/Employment";
-import "./App.css";
 
 function App() {
   return (

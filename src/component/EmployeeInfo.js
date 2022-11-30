@@ -17,7 +17,15 @@ export const employee = [
       passOut: "2022-06-22",
       address: "Lucknow",
     },
-    employment: { currentCompany: "Celestial" },
+    employment: {
+      currentCompany: "Celestial",
+      employmentHistory: [
+        {
+          employer: "Google",
+          year: "2019",
+        },
+      ],
+    },
   },
   // {
   //   id: 2,
@@ -36,6 +44,10 @@ export const employee = [
   //     passOut: "2022-06-22",
   //     address: "Lucknow",
   //   },
-  //   employment: { currentCompany: "Celestial" },
+  //   //   employment: { currentCompany: "Celestial" ,
+  // history: [{
+  //   employer: "google"
+  // },];
   // },
+  //   // },
 ];

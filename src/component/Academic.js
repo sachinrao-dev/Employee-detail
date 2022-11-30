@@ -8,11 +8,13 @@ import {
   TableRow,
 } from "@mui/material";
 import EmployeeDetail from "./Context";
+import NavBar from "./NavBar";
 
 function Academic() {
   const academic = useContext(EmployeeDetail);
   return (
     <div className="container">
+      <NavBar />
       <TableContainer>
         <Table>
           <TableHead>

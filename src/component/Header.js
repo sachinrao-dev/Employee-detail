@@ -1,10 +1,11 @@
 import React from "react";
-// import "./Header.css";
+import useStyle from "./HeaderStyle";
 
 function Header() {
+  const classes = useStyle();
   return (
-    <div className="header">
-      <h1>Header page</h1>
+    <div className={classes.header}>
+      <p className={classes.admin}>Admin Raj</p>
     </div>
   );
 }
