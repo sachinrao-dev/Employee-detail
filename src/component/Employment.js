@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import {
   Table,
   TableBody,
@@ -19,6 +20,7 @@ function Employment() {
   const userDetail = employeeEmploymentData.find((item) => item.id === parseInt(userId, 10));
   return (
     <div className={classes.container}>
+      <NavLink to={`/users/${userId}/employment/alluserscompanies`}>Employees in all companies</NavLink>
       <NavBar />
       <TableContainer>
         <Table>

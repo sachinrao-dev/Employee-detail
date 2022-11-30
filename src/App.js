@@ -8,6 +8,7 @@ import Personal from "./component/Personal";
 import Professional from "./component/Professional";
 import Academic from "./component/Academic";
 import Employment from "./component/Employment";
+import AllEmployeeInCompany from "./component/AllEmployeeInCompany";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="professional" element={<Professional />} />
             <Route path="academic" element={<Academic />} />
             <Route path="employment" element={<Employment />} />
+            <Route path="employment/alluserscompanies" element={<AllEmployeeInCompany />} />
           </Route>
         </Routes>
       </EmployeeDetail.Provider>
