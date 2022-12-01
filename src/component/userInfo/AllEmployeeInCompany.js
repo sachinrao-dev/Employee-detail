@@ -29,7 +29,7 @@ function AllEmployeeInCompany() {
             {allEmployeeData.map((item) => (
               <TableRow>
                 <TableCell>{item.name}</TableCell>
-                <TableCell>{item.occupation}</TableCell>
+                <TableCell>{item.employment.currentCompany}</TableCell>
               </TableRow>
             ))}
           </TableBody>

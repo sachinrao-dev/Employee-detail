@@ -8,6 +8,12 @@ const useStyle = makeStyles({
   barLink: {
     display: "flex",
     flexDirection: "row",
+    "& a": {
+      textDecoration: "none",
+      color: "black",
+      background: "#BAD1C2",
+      padding: "4px",
+    },
   },
   container: {
     width: "70%",
@@ -22,7 +28,7 @@ const useStyle = makeStyles({
             fontSize: "16px",
             padding: "7px",
             "& a": {
-              color: "black",
+              // color: "black",
               textDecoration: "none",
             },
           },

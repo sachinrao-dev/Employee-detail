@@ -13,10 +13,6 @@ const useStyle = makeStyles({
             textAlign: "center",
             fontSize: "16px",
             padding: "7px",
-            "& a": {
-              color: "black",
-              textDecoration: "none",
-            },
           },
         },
       },
