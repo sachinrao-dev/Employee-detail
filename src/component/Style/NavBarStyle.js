@@ -15,6 +15,9 @@ const useStyle = makeStyles({
     textDecoration: "none",
     color: "black",
     background: "#BAD1C2",
+    paddingRight: "10px",
+    paddingLeft: "10px",
+
   },
 });
 

@@ -12,6 +12,7 @@ const useStyle = makeStyles({
             color: "black",
             textAlign: "center",
             fontSize: "16px",
+            padding: "7px",
             "& a": {
               color: "black",
               textDecoration: "none",
@@ -28,6 +29,7 @@ const useStyle = makeStyles({
             background: "#282A3A",
             fontSize: "1em",
             fontWeight: "700",
+            padding: "7px",
           },
         },
       },

@@ -22,8 +22,8 @@ function Employment() {
   );
   return (
     <div className={classes.container}>
-      <NavBar />
-      <div>
+      <div className={classes.barLink}>
+        <NavBar />
         <NavLink
           className={classes.navLink}
           to={`/users/${userId}/employment/alluserscompanies`}

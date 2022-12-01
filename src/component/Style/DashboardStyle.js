@@ -15,6 +15,7 @@ const useStyle = makeStyles({
               color: "black",
               textAlign: "center",
               fontSize: "16px",
+              padding: "7px",
               "& a": {
                 color: "black",
                 textDecoration: "none",
