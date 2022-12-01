@@ -1,5 +1,5 @@
 ## Project Description
-Book Management is Webpage Application made of using JavaScript's very popular library React - Js. It is having a nested Data of individual's form. A form component is used to insert a Book information data in the table in which the book data is shown
+EmployeeDetail is Webpage Application made of using JavaScript's very popular library React - Js. It is having a nested route to show employee information.
 
 ## Technology Used :
 
