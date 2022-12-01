@@ -7,21 +7,26 @@ Book Management is Webpage Application made of using JavaScript's very popular l
 - JavaScript :  JavaScript's basics and some advanced concepts 
 - JSX : JavaScript XML is used to structure the page and using Different UI components inside React.js.
 - CSS : Cascading Style Sheet is used to style the page and make it more attractive and user's eye comfortable
+- MUI : Material ui 
 
 ## What I've Learnt :
 
 I have Learnt :
-- Class and Functional components and their difference.
-- A brief knowledge about States, Props and Hooks
-- Importance of ES-lint and its setup.
-- Writing Clean and Efficient code.
-- Git and Github.
+
+- A brief knowledge context api Hooks
+- In this project i learnt react-routing/nested routing using Id
+- 
 
 ## Setup Project
 
-Get a clone of application from [Here](https://github.com/sachinrao-dev/Book-Management-using-reacrt)
+Get a clone of application from [Here](https://github.com/sachinrao-dev/Employee-detail)
+
+after that run this command
+## `cd Employee-detail`
 
 ### `npm start`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes. You may also see any lint errors in the console.
+
+## initial view of the application
