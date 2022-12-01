@@ -24,14 +24,13 @@ const useStyle = makeStyles({
         },
         "& thead": {
           height: "5px",
-          "& tr": {
-            "& th": {
-              textAlign: "center",
-              color: "white",
-              background: "#282A3A",
-              fontSize: "1em",
-              fontWeight: "700",
-            },
+          "& th": {
+            textAlign: "center",
+            color: "white",
+            background: "#282A3A",
+            fontSize: "1em",
+            fontWeight: "700",
+            padding: "7px",
           },
         },
       },

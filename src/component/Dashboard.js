@@ -11,7 +11,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import useStyle from "./DashboardStyle";
+import useStyle from "./Style/DashboardStyle";
 import EmployeeDetail from "./Context";
 
 function Dashboard() {

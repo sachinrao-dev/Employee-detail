@@ -45,7 +45,7 @@ export const employee = [
       address: "New York",
     },
     employment: {
-      currentCompany: "Celestial",
+      currentCompany: "Google",
       employmentHistory: [
         {
           employer: "Google",

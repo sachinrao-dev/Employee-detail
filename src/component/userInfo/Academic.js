@@ -8,9 +8,9 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import EmployeeDetail from "./Context";
-import NavBar from "./NavBar";
-import useStyle from "./AcademicStyle";
+import EmployeeDetail from "../Context";
+import NavBar from "../NavBar";
+import useStyle from "../Style/AcademicStyle";
 
 function Academic() {
   const employeeAcademicData = useContext(EmployeeDetail);

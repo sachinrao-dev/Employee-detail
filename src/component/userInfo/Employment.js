@@ -9,19 +9,28 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import NavBar from "./NavBar";
-import EmployeeDetail from "./Context";
-import useStyle from "./EmploymentStyle";
+import NavBar from "../NavBar";
+import EmployeeDetail from "../Context";
+import useStyle from "../Style/EmploymentStyle";
 
 function Employment() {
   const { userId } = useParams();
   const classes = useStyle();
   const employeeEmploymentData = useContext(EmployeeDetail);
-  const userDetail = employeeEmploymentData.find((item) => item.id === parseInt(userId, 10));
+  const userDetail = employeeEmploymentData.find(
+    (item) => item.id === parseInt(userId, 10),
+  );
   return (
     <div className={classes.container}>
       <NavBar />
-      <NavLink className={classes.navLink} to={`/users/${userId}/employment/alluserscompanies`}>Employees in all companies</NavLink>
+      <div>
+        <NavLink
+          className={classes.navLink}
+          to={`/users/${userId}/employment/alluserscompanies`}
+        >
+          Current company of all employees
+        </NavLink>
+      </div>
       <TableContainer>
         <Table>
           <TableHead>

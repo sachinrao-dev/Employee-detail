@@ -7,9 +7,9 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import EmployeeDetail from "./Context";
-import useStyle from "./AllEmployeeInCompanyStyle";
-import NavBar from "./NavBar";
+import EmployeeDetail from "../Context";
+import useStyle from "../Style/AllEmployeeInCompanyStyle";
+import NavBar from "../NavBar";
 
 function AllEmployeeInCompany() {
   const classes = useStyle();

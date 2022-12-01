@@ -3,12 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./component/Header";
 import Dashboard from "./component/Dashboard";
 import EmployeeDetail from "./component/Context";
-import { employee } from "./component/EmployeeInfo";
-import Personal from "./component/Personal";
-import Professional from "./component/Professional";
-import Academic from "./component/Academic";
-import Employment from "./component/Employment";
-import AllEmployeeInCompany from "./component/AllEmployeeInCompany";
+import { employee } from "./component/constant/EmployeeInfo";
+import Personal from "./component/userInfo/Personal";
+import Professional from "./component/userInfo/Professional";
+import Academic from "./component/userInfo/Academic";
+import Employment from "./component/userInfo/Employment";
+import AllEmployeeInCompany from "./component/userInfo/AllEmployeeInCompany";
 
 function App() {
   return (

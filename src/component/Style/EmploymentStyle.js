@@ -1,6 +1,10 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles({
+  navLink: {
+    textAlign: "right",
+    display: "block",
+  },
   container: {
     width: "70%",
     margin: "0 auto",
