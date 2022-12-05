@@ -2,7 +2,6 @@
   "name": "employee-detail",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sachinrao-dev.github.io/Employee-detail",
   "dependencies": {
     "-": "^0.0.1",
     "@babel/eslint-parser": "^7.19.1",
@@ -11,14 +10,16 @@
     "@mui/material": "^5.10.15",
     "@mui/styles": "^5.10.15",
     "@mui/system": "^5.10.15",
+    "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "gh-pages": "^4.0.0",
+    "firebase": "^9.14.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "save-dev": "^0.0.1-security",
@@ -28,9 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
