@@ -1,5 +1,5 @@
 import React from "react";
-// import { Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Header from "./component/Header";
 // import Dashboard from "./component/Dashboard";
 // import EmployeeDetail from "./component/Context";
@@ -12,7 +12,8 @@ import React from "react";
 import { Provider } from "react-redux";
 import EmployeeFetchData from "./redux/EmployeeFetchData";
 import store from "./redux/store/store";
-import Dashboard from "./redux/Dashboard";
+import Dashboard from "./redux/UserInfo/Dashboard";
+import PersonalInfo from "./redux/UserInfo/PersonalInfo";
 
 function App() {
   // console.log(employee, "ssss");
@@ -35,7 +36,14 @@ function App() {
     <div>
       <Provider store={store}>
         <EmployeeFetchData />
-        <Dashboard />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="users/:userId">
+              <Route path="personal" element={<PersonalInfo />} />
+            </Route>
+          </Routes>
+        </Router>
       </Provider>
     </div>
   );
