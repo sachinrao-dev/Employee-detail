@@ -10,8 +10,10 @@ import {
   TableRow,
 } from "@mui/material";
 import NavBar from "../NavBar";
+import useStyle from "../style/DashboardStyle";
 
 function EmploymentInfo() {
+  const classes = useStyle();
   const { userId } = useParams();
   const employementlInfo = useSelector((state) => state.employee.item);
   const employeEmploymentlInfo = employementlInfo.find(
@@ -19,7 +21,7 @@ function EmploymentInfo() {
   );
 
   return (
-    <div>
+    <div className={classes.tableContainer}>
       <NavBar />
       <NavLink
         to={`/users/${userId}/employment/alluserscompanies`}

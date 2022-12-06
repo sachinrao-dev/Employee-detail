@@ -10,8 +10,10 @@ import {
   TableRow,
 } from "@mui/material";
 import NavBar from "../NavBar";
+import useStyle from "../style/DashboardStyle";
 
 function PersonalInfo() {
+  const classes = useStyle();
   const { userId } = useParams();
   const personalInfo = useSelector((state) => state.employee.item);
   const employeePersonalInformation = personalInfo.find(
@@ -19,7 +21,7 @@ function PersonalInfo() {
   );
 
   return (
-    <div>
+    <div className={classes.tableContainer}>
       <NavBar />
       <TableContainer>
         <Table>

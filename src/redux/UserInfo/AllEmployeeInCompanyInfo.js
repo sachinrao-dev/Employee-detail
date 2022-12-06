@@ -9,11 +9,13 @@ import {
   TableRow,
 } from "@mui/material";
 import NavBar from "../NavBar";
+import useStyle from "../style/DashboardStyle";
 
 function PersonalInfo() {
+  const classes = useStyle();
   const allEmployeeDataInfo = useSelector((state) => state.employee.item);
   return (
-    <div>
+    <div className={classes.tableContainer}>
       <NavBar />
       <TableContainer>
         <Table>
