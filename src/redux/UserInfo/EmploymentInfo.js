@@ -22,12 +22,12 @@ function EmploymentInfo() {
 
   return (
     <div className={classes.tableContainer}>
-      <NavBar />
-      <NavLink
-        to={`/users/${userId}/employment/alluserscompanies`}
-      >
-        Current company of all employees
-      </NavLink>
+      <div className={classes.navLink}>
+        <NavBar />
+        <NavLink className={classes.navBar} to={`/users/${userId}/employment/alluserscompanies`}>
+          Current company of all employees
+        </NavLink>
+      </div>
       <TableContainer>
         <Table>
           <TableHead>

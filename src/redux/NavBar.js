@@ -1,14 +1,16 @@
 import React from "react";
 import { NavLink, Outlet, useParams } from "react-router-dom";
+import useStyle from "./style/NavBarStyle";
 
 function NavBar() {
   const { userId } = useParams();
+  const classes = useStyle();
   return (
-    <div>
-      <NavLink to={`/users/${userId}/personal`}>Personal</NavLink>
-      <NavLink to={`/users/${userId}/professional`}>Professional</NavLink>
-      <NavLink to={`/users/${userId}/academic`}>Academic</NavLink>
-      <NavLink to={`/users/${userId}/employment`}>Employment</NavLink>
+    <div className={classes.navBar}>
+      <NavLink className={classes.nav} to={`/users/${userId}/personal`}>Personal</NavLink>
+      <NavLink className={classes.nav} to={`/users/${userId}/professional`}>Professional</NavLink>
+      <NavLink className={classes.nav} to={`/users/${userId}/academic`}>Academic</NavLink>
+      <NavLink className={classes.nav} to={`/users/${userId}/employment`}>Employment</NavLink>
       <Outlet />
     </div>
   );

@@ -17,6 +17,9 @@ function Dashboard() {
   const classes = useStyle();
   return (
     <div className={classes.tableContainer}>
+      <div className={classes.allUser}>
+        <h3>All Users</h3>
+      </div>
       <TableContainer>
         <Table>
           <TableHead>
