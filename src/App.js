@@ -17,6 +17,7 @@ import PersonalInfo from "./redux/UserInfo/PersonalInfo";
 import ProfessionalInfo from "./redux/UserInfo/ProfessionalInfo";
 import AcademicInfo from "./redux/UserInfo/AcademicInfo";
 import EmploymentInfo from "./redux/UserInfo/EmploymentInfo";
+import AllEmployeeInCompanyInfo from "./redux/UserInfo/AllEmployeeInCompanyInfo";
 
 function App() {
   // console.log(employee, "ssss");
@@ -47,6 +48,10 @@ function App() {
               <Route path="professional" element={<ProfessionalInfo />} />
               <Route path="academic" element={<AcademicInfo />} />
               <Route path="employment" element={<EmploymentInfo />} />
+              <Route
+                path="employment/alluserscompanies"
+                element={<AllEmployeeInCompanyInfo />}
+              />
             </Route>
           </Routes>
         </Router>

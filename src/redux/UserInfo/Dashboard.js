@@ -12,7 +12,6 @@ import {
 
 function Dashboard() {
   const employee = useSelector((state) => state.employee);
-  console.log(employee, "employee");
   return (
     <div>
       <TableContainer>

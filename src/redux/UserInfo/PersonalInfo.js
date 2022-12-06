@@ -25,7 +25,9 @@ function PersonalInfo() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Experiences</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Address</TableCell>
+              <TableCell>Mobile No</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
