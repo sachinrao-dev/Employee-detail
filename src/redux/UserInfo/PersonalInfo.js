@@ -17,7 +17,6 @@ function PersonalInfo() {
   const employeePersonalInformation = personalInfo.find(
     (item) => item.id === parseInt(userId, 10),
   );
-  console.log(employeePersonalInformation, "djfkdhkfhgdkj");
 
   return (
     <div>
@@ -26,9 +25,7 @@ function PersonalInfo() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Address</TableCell>
-              <TableCell>Mobile No</TableCell>
+              <TableCell>Experiences</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
