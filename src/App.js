@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import EmployeeFetchData from "./component/constant/EmployeeFetchData";
 import store from "./redux/store/store";
-import Dashboard from "./redux/UserInfo/Dashboard";
-import PersonalInfo from "./redux/UserInfo/PersonalInfo";
-import ProfessionalInfo from "./redux/UserInfo/ProfessionalInfo";
-import AcademicInfo from "./redux/UserInfo/AcademicInfo";
-import EmploymentInfo from "./redux/UserInfo/EmploymentInfo";
-import AllEmployeeInCompanyInfo from "./redux/UserInfo/AllEmployeeInCompanyInfo";
+import Dashboard from "./component/UserInfo/Dashboard";
+import PersonalInfo from "./component/UserInfo/PersonalInfo";
+import ProfessionalInfo from "./component/UserInfo/ProfessionalInfo";
+import AcademicInfo from "./component/UserInfo/AcademicInfo";
+import EmploymentInfo from "./component/UserInfo/EmploymentInfo";
+import AllEmployeeInCompanyInfo from "./component/UserInfo/AllEmployeeInCompanyInfo";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <EmployeeFetchData />
         <Router>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/*" element={<Dashboard />} />
             <Route path="users/:userId">
               <Route path="personal" element={<PersonalInfo />} />
               <Route path="professional" element={<ProfessionalInfo />} />

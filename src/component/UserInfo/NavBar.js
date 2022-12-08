@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Outlet, useParams } from "react-router-dom";
-import useStyle from "../component/style/NavBarStyle";
+import useStyle from "../NavBarStyle";
 
 function NavBar() {
   const { userId } = useParams();
