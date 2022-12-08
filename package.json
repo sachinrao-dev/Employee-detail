@@ -2,7 +2,6 @@
   "name": "employee-detail",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sachinrao-dev.github.io/Employee-detail",
   "dependencies": {
     "-": "^0.0.1",
     "@babel/eslint-parser": "^7.19.1",
