@@ -17,7 +17,6 @@ const useStyle = makeStyles({
     background: "#BAD1C2",
     paddingRight: "10px",
     paddingLeft: "10px",
-
   },
 });
 

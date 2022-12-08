@@ -1,30 +1,41 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles({
-  allUserList: {
-    width: "70%",
-    margin: "0 auto",
+  allUser: {
+    textAlign: "left",
+  },
+  navBar: {
+    textAlign: "right",
+    display: "block",
+    background: "#BAD1C2",
+    paddingRight: "5px",
+    paddingLeft: "5px",
+    "& a": {
+      color: "white",
+      background: "#282A3A",
+      textDecoration: "none",
+    },
+  },
+  navLink: {
+    display: "flex",
+    flexDirection: "row",
   },
   tableContainer: {
     "& div": {
+      width: "70%",
+      margin: "0 auto",
       "& table": {
         "& tbody": {
           background: "#BAD1C2",
-          "& tr": {
-            "& td": {
-              color: "black",
-              textAlign: "center",
-              fontSize: "16px",
-              padding: "7px",
-              "& a": {
-                // color: "black",
-                textDecoration: "none",
-              },
+          "& td": {
+            textAlign: "center",
+            "& a": {
+              textDecoration: "none",
+              cursor: "pointer",
             },
           },
         },
         "& thead": {
-          height: "5px",
           "& th": {
             textAlign: "center",
             color: "white",
@@ -36,9 +47,6 @@ const useStyle = makeStyles({
         },
       },
     },
-  },
-  allUser: {
-    textAlign: "left",
   },
 });
 

@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 import NavBar from "../NavBar";
-import useStyle from "../style/DashboardStyle";
+import useStyle from "../../component/style/DashboardStyle";
 
 function PersonalInfo() {
   const classes = useStyle();

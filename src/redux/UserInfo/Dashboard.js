@@ -10,7 +10,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import useStyle from "../style/DashboardStyle";
+import useStyle from "../../component/style/DashboardStyle";
 
 function Dashboard() {
   const employee = useSelector((state) => state.employee);

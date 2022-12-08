@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
-import EmployeeFetchData from "./redux/EmployeeFetchData";
+import EmployeeFetchData from "./component/constant/EmployeeFetchData";
 import store from "./redux/store/store";
 import Dashboard from "./redux/UserInfo/Dashboard";
 import PersonalInfo from "./redux/UserInfo/PersonalInfo";
