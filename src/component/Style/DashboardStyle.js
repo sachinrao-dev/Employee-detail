@@ -4,12 +4,18 @@ const useStyle = makeStyles({
   allUser: {
     textAlign: "left",
   },
+  bar: {
+    width: "25% !important",
+    marginBottom: "25px !important",
+
+  },
   navBar: {
     textAlign: "right",
     display: "block",
     background: "#BAD1C2",
-    paddingRight: "5px",
-    paddingLeft: "5px",
+    padding: "10px",
+    textDecoration: "none",
+    color: "black",
     "& a": {
       color: "white",
       background: "#282A3A",
@@ -18,9 +24,9 @@ const useStyle = makeStyles({
   },
   navLink: {
     display: "flex",
-    flexDirection: "row",
   },
   tableContainer: {
+    marginTop: "30px",
     "& div": {
       width: "70%",
       margin: "0 auto",

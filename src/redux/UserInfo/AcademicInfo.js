@@ -30,7 +30,7 @@ function AcademicInfo() {
               <TableCell>College Name</TableCell>
               <TableCell>Degree</TableCell>
               <TableCell>Pass Out year</TableCell>
-              <TableCell>address</TableCell>
+              <TableCell>Address</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
