@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -9,16 +10,25 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import NavBar from "../NavBarStyle";
+import NavBar from "./NavBar";
 import useStyle from "../style/DashboardStyle";
 
 function AcademicInfo() {
   const classes = useStyle();
   const { userId } = useParams();
   const academicInfo = useSelector((state) => state.employee.item);
-  const employeeAcademicInformation = academicInfo.find(
-    (item) => item.id === parseInt(userId, 10),
-  );
+  const [academicInfoData, setAcademicInfoData] = useState();
+
+  useEffect(()=>{
+    const employeeAcademicInformation = academicInfo.find(
+      (item) => item.id === parseInt(userId, 10)
+    );
+    setAcademicInfoData(employeeAcademicInformation);
+    
+  }, [academicInfo]);
+  // const employeeAcademicInformation = academicInfo.find(
+  //   (item) => item.id === parseInt(userId, 10)
+  // );
 
   return (
     <div className={classes.tableContainer}>
@@ -35,10 +45,18 @@ function AcademicInfo() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>{employeeAcademicInformation?.academic?.collegeName}</TableCell>
-              <TableCell>{employeeAcademicInformation?.academic?.degree}</TableCell>
-              <TableCell>{employeeAcademicInformation?.academic?.passOut}</TableCell>
-              <TableCell>{employeeAcademicInformation?.academic?.address}</TableCell>
+              <TableCell>
+                {academicInfoData?.academic?.collegeName}
+              </TableCell>
+              <TableCell>
+                {academicInfoData?.academic?.degree}
+              </TableCell>
+              <TableCell>
+                {academicInfoData?.academic?.passOut}
+              </TableCell>
+              <TableCell>
+                {academicInfoData?.academic?.address}
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>

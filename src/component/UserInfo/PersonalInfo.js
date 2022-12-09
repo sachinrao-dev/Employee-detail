@@ -1,4 +1,7 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-undef */
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -9,16 +12,26 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import NavBar from "../NavBarStyle";
+import NavBar from "./NavBar";
 import useStyle from "../style/DashboardStyle";
 
 function PersonalInfo() {
   const classes = useStyle();
   const { userId } = useParams();
+  const [personalInfoData, setPersonalInfoData] = useState();
   const personalInfo = useSelector((state) => state.employee.item);
-  const employeePersonalInformation = personalInfo.find(
-    (item) => item.id === parseInt(userId, 10),
-  );
+
+  useEffect(() => {
+    const employeePersonalInformation = personalInfo.find(
+      (item) => item.id === parseInt(userId, 10)
+    );
+    setPersonalInfoData(employeePersonalInformation);
+  }, [personalInfo]);
+
+  // const personalInfo = useSelector((state) => state.employee.item);
+  // const employeePersonalInformation = personalInfo.find(
+  //   (item) => item.id === parseInt(userId, 10)
+  // );
 
   return (
     <div className={classes.tableContainer}>
@@ -35,13 +48,13 @@ function PersonalInfo() {
           <TableBody>
             <TableRow>
               <TableCell>
-                {employeePersonalInformation?.personal?.name}
+                {personalInfoData?.personal?.name}
               </TableCell>
               <TableCell>
-                {employeePersonalInformation?.personal?.address}
+                {personalInfoData?.personal?.address}
               </TableCell>
               <TableCell>
-                {employeePersonalInformation?.personal?.phoneNo}
+                {personalInfoData?.personal?.phoneNo}
               </TableCell>
             </TableRow>
           </TableBody>

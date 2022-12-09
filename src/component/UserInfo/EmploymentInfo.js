@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams, NavLink } from "react-router-dom";
 import {
@@ -9,16 +10,24 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import NavBar from "../NavBarStyle";
+import NavBar from "./NavBar";
 import useStyle from "../style/DashboardStyle";
 
 function EmploymentInfo() {
   const classes = useStyle();
   const { userId } = useParams();
+  const [employementlInfoData, setEmployementlInfoData] = useState();
   const employementlInfo = useSelector((state) => state.employee.item);
+useEffect(()=>{
   const employeEmploymentlInfo = employementlInfo.find(
     (item) => item.id === parseInt(userId, 10),
   );
+  setEmployementlInfoData(employeEmploymentlInfo);
+}, [employementlInfo]);
+
+  // const employeEmploymentlInfo = employementlInfo.find(
+  //   (item) => item.id === parseInt(userId, 10),
+  // );
 
   return (
     <div className={classes.tableContainer}>
@@ -43,7 +52,7 @@ function EmploymentInfo() {
           <TableBody>
             <TableRow>
               <TableCell>
-                {employeEmploymentlInfo?.employment?.currentCompany}
+                {employementlInfoData?.employment?.currentCompany}
               </TableCell>
             </TableRow>
           </TableBody>

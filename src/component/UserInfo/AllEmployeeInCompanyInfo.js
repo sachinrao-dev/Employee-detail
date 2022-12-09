@@ -8,7 +8,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import NavBar from "../NavBarStyle";
+import NavBar from "./NavBar";
 import useStyle from "../style/DashboardStyle";
 
 function PersonalInfo() {

@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
@@ -15,10 +16,16 @@ import useStyle from "../style/DashboardStyle";
 function ProfessionalInfo() {
   const classes = useStyle();
   const { userId } = useParams();
+  const [professionalInfoData, setProfessionalInfoData] = useState();
   const professionalInfo = useSelector((state) => state.employee.item);
-  const employeeProfessionalInfo = professionalInfo.find(
-    (item) => item.id === parseInt(userId, 10),
-  );
+  useEffect(()=>{
+    const employeeProfessionalInfo = professionalInfo.find(
+      (item) => item.id === parseInt(userId, 10),
+    );
+    setProfessionalInfoData(employeeProfessionalInfo);
+    
+  }, [professionalInfo]);
+  
 
   return (
     <div className={classes.tableContainer}>
@@ -33,7 +40,7 @@ function ProfessionalInfo() {
           <TableBody>
             <TableRow>
               <TableCell>
-                {employeeProfessionalInfo?.professional?.experiences}
+                {professionalInfoData?.professional?.experiences}
               </TableCell>
             </TableRow>
           </TableBody>
